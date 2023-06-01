@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <form method="POST" enctype ="multipart/form-data" >
+        {% csrf_token %}
+
+        <label for="sname"><b>Student Name</b></label>
+        <input type="text" size="24" name="sname"><br><br>
+
+        
+        <label for="lname"><b>Last Name</b></label>
+        <input type="text" size="24" name="lname"><br><br>
+
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" id="st_email" name="semail"><br><br>
+        <span id="message"></span><br>
+
+        <label for="birthday">DOB</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+       <!-- <label for="pname"><b>parent Name</b></label>
+        <input type="text" size="24" name="pname"><br><br> -->
+
+        <label for="phone">Address1</label>
+
+        <textarea name="address1" cols="30" rows="10">address</textarea><br><br>
+
+        <label for="phone">Address2</label>
+
+        <textarea name="address2" cols="30" rows="10">address</textarea><br><br>
+
+
+        <label>password</label>
+       <input type="password" name="psw"><br><br>
+
+        <button type="submit" name="btn1" >submit</button>
+        
+    </form> 
+    
+</body>
+</html>
+</body>
+</html>

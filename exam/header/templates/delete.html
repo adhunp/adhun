@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if movie_details %}
+    <table style="width:100%">
+        <tr>
+            <th>sl_no</th>
+            <th>name</th>
+            <th>lname</th>
+            <th>email</th>
+            <th>dob</th>
+            <th>phone_no</th>
+            <th>address1</th>
+            <th>address2</th>
+            {% comment %} 
+            
+            {% endcomment %}
+            
+            
+        </tr>
+        {% for student in movie_details %}
+       
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{student.sname}}</td>
+            <td>{{student.lname}}</td>
+            <td>{{student.semail}}</td>
+            <td>{{student.sdob}}</td>
+            <td>{{student.sphone}}</td>
+            <td>{{student.address1}}</td>
+            <td>{{student.address2}}</td>
+            <td><a href="{% url 'student:de_students' student.id %}">Delete</a></td>
+            {% comment %}
+            {% endcomment %}
+
+        </tr>
+        {% endfor %}
+    </table>
+    <span>{{status}}</span>
+    {% else %}
+    <h1>no data</h1>
+    {% endif %} 
+</body>
+</html>
